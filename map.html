@@ -31,6 +31,102 @@
         }).addTo(map);
 
         var marker = L.marker([51.5, -0.09]).addTo(map);
+
+        var circle = L.circle([51.508, -0.11], {
+            color: '#7C4C68',
+            fillcolor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500,
+        }).addTo(map);
+
+        marker.bindPopup("<b> My name is Dominic! </b><br> I am a Bish.").openPopup();
+
+        //GeoJSON//
+        var myGeoJSON = {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.99696519, 52.52022851]
+                },
+                "id": "fac6b5cb-94f5-4bd9-94b7-3fea8f78aff5",
+                "properties": {
+                    "name": ""
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.99997845, 52.52198282]
+                },
+                "id": "13e49dd3-395d-4317-8d39-49c345673252",
+                "properties": {
+                    "name": ""
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.99621877, 52.51778451]
+                },
+                "id": "834b9ac3-5de3-43bb-be45-de5ff6d5693a",
+                "properties": {
+                    "name": ""
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.99442188, 52.51874088]
+                },
+                "id": "833c9a35-01c5-470e-9c91-2809d9e2b440",
+                "properties": {
+                    "name": ""
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-2.0012329, 52.52140378]
+                },
+                "id": "98a2069e-dbe5-4581-9dbb-c40e7f6e4a8a",
+                "properties": {
+                    "name": ""
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [-1.99696519, 52.52022851],
+                            [-1.99442188, 52.51874088],
+                            [-1.99621877, 52.51778451],
+                            [-2.0012329, 52.52140378],
+                            [-1.99997845, 52.52198282],
+                            [-1.99696519, 52.52022851]
+                        ]
+                    ]
+                },
+                "id": "8d56f241-9394-4ce8-b977-e2eca0c8e593",
+                "properties": {
+                    "name": "West Bromwich"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.99724245, 52.5184887]
+                },
+                "id": "c6bfd1ad-4b20-4fa5-82b4-1c4b0d497d60",
+                "properties": {
+                    "name": ""
+                }
+            }]
+        }
+
+        L.geoJSON(myGeoJSON).addTo(map)
     </script>
 
 </body>
